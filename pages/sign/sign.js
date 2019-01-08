@@ -24,9 +24,10 @@ Page({
         // 更新当前用户的信息
         user.set(userInfo).save().then(user => {
           // 成功，此时可在控制台中看到更新后的用户信息
-          // console.log(user.toJSON())
+          console.log('111111',user.toJSON())
           this.setData({
-            userId: user.toJSON().objectId
+            userId: user.toJSON().objectId,
+            userName:user.toJSON().nickName
           })
         }).catch(console.error);
       }
