@@ -1,0 +1,20 @@
+<view class="container">  
+  <button class="signButton" bindtap="createSign">发起约球</button>
+  <view wx:for="{{formList}}" wx:key="{{index}}" class="formList">
+    <view class="signform" bindtap="clickIntoForm" data-index="{{index}}">
+      <view class="formMessage">
+        <view class="row"> <text class="title">标题：</text> <text class="content">{{item.name}}</text> </view>
+        <view class="row"> <text class="title">约球时间：</text> <text class="content">{{item.time}}</text> </view>
+        <view class="row"> <text class="title">发起者：</text> <text class="content">{{item.creater}}</text> </view>
+        <view class="row"> <text class="remarks title">备注：</text> <text class="content">{{item.remarks}}</text> </view>
+      </view>
+      <view class="formButton">
+        <button open-type="{{formList[index].signIn[userNickName]?'share':''}}" class="signIn {{formList[index].signIn[userNickName]?'invite':''}}" disabled="{{formList[index].leave[userNickName]}}" catchtap="signInConfirm" data-index="{{index}}">{{formList[index].signIn[userNickName]===true?"邀请球友":"加一个"}}</button>
+        <button class="leave" disabled="{{formList[index].signIn[userNickName]}}" bindtap="leaveConfirm" data-index="{{index}}">{{formList[index].leave[userNickName]===true?"已鸽":"咕咕咕"}}</button>
+      </view>
+    </view>
+    <view class="iconWrapper">
+      <text class="iconfont icon-delete" hidden="{{item.owner!==userId}}" bindtap="deleteForm" data-index="{{index}}"></text>
+    </view>
+  </view>
+</view>

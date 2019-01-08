@@ -1,0 +1,24 @@
+<!--pages/formMessage/formMessage.wxml-->
+<view>
+  <view class="signInListWrapper">
+    <text>到场名单</text>
+    <view class="signInList">
+      <view wx:for="{{signInList}}" wx:key="{{index}}" class="messageWrapper">
+          <image src="{{item.avatarUrl}}" class="userPic" mode="aspectFit"></image>
+          <text>{{item.nickName}}</text>
+      </view>
+    </view>
+    <text class="result">预计到场人数：{{signInSum}}人</text>
+  </view>
+  
+  <view class="leaveListWrapper">
+    <text>缺席名单</text>
+    <view class="leaveList">
+      <view wx:for="{{leaveList}}" wx:key="{{index}}" class="messageWrapper">
+          <image src="{{item.avatarUrl}}" class="userPic" mode="aspectFit"></image>
+          <text>{{item.nickName}}</text>
+      </view>
+    </view>
+    <text class="result">咕咕咕人数：{{leaveSum}}人</text>
+  </view>
+</view>

@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/sign/sign",
+    "pages/uploadFile/uploadFile",
+    "pages/create-signform/create-signform",
+    "pages/formMessage/formMessage"
+  ],
+  "window": {
+    "navigationBarTextStyle":"white",
+    "backgroundTextStyle": "heavy",
+    "navigationBarBackgroundColor": "#6DA1DA",
+    "navigationBarTitleText": "中大约球"
+  },
+  "tabBar": {
+    "backgroundColor":"#F8F8F8",
+    "borderStyle": "black",
+    "color": "black",
+    "selectedColor": "black",
+    "list": [
+      {
+        "pagePath": "pages/sign/sign",
+        "text": "约球",
+        "iconPath": "iconfont/volleyball.png",
+        "selectedIconPath": "iconfont/volleyball.png"
+      },
+      {
+        "pagePath": "pages/uploadFile/uploadFile",
+        "text": "黑照",
+        "iconPath": "iconfont/picture.png",
+        "selectedIconPath": "iconfont/picture.png"
+      }
+    ]
+  }
+}

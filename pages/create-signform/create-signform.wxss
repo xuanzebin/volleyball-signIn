@@ -1,0 +1,31 @@
+form{
+  border:2px solid black;
+  border-radius:10rpx;
+  padding:20rpx;
+  margin-top:150rpx;
+}
+.section textarea,
+.section input{
+  border:2px solid black;
+  border-radius:6rpx;
+  margin-left:20rpx;
+  width:65%;
+}
+.section{
+  display:flex;
+  justify-content: flex-end;
+  margin-bottom:30rpx;
+}
+.section button{
+  width:40%;
+}
+.submitButton{
+  background:#33D1A1;
+  box-shadow: 0 0 3px rgba(0,0,0,0.5);
+  color:white;
+}
+.resetButton{
+  background:red;
+  box-shadow: 0 0 3px rgba(0,0,0,0.5);
+  color:white;
+}

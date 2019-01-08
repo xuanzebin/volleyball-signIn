@@ -1,0 +1,38 @@
+/* pages/formMessage/formMessage.wxss */
+.signInList,
+.leaveList{
+  display: flex;
+  flex-wrap: wrap;
+}
+.signInListWrapper,
+.leaveListWrapper{
+  border:3px solid black;
+  padding:10rpx;
+  border-radius: 10rpx;
+  margin:40rpx;
+  display: flex;
+  flex-direction: column;
+}
+.userPic{
+  width:150rpx; height:150rpx;
+  border-radius: 50%;
+  margin:0 32rpx;
+}
+.messageWrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin:12rpx 0;
+}
+text{
+  font-weight: bold;
+  text-align: center;
+}
+.result{
+  color:red;
+  margin:6rpx 0;
+}
+.messageWrapper text{
+  font-size:30rpx;
+}

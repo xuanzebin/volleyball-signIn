@@ -1,0 +1,16 @@
+<view class="container">
+  <button bindtap="upload" class="uploadButton">上传图片</button>
+  <view class="imageWrapper">
+    <view wx:for="{{fileUrl}}" wx:key="{{index}}" class="picWrapper" wx:if="{{fileUrl[0].time}}">
+      <view class="picMessage" bindtap="foldPic" data-index="{{index}}">
+        <text>上传时间: {{item.time}}</text>
+        <text class="iconfont {{!foldCheck[index]?'icon-down':'icon-up'}}"></text>
+      </view>
+      <view class="itemWrapper" hidden="{{foldCheck[index]}}">
+        <view wx:for="{{item.url}}" wx:key="{{index}}">
+          <image src="{{item}}" class="uploadImage" mode="aspectFit"  bindtap='previewMoreImage' data-src="{{item}}"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

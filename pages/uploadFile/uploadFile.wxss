@@ -1,0 +1,32 @@
+.uploadImage{
+  border:3px solid black;
+  width:500rpx; height: 500rpx;
+  margin-bottom:20rpx;
+  border-radius: 12rpx;
+}
+.imageWrapper{
+  width:700rpx;
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+}
+.picMessage{
+  text-align: center;
+  border:3px solid black;
+  background: #7DB8EC;
+  opacity: 0.8;
+  margin-bottom:50rpx;
+  width:500rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8rpx;
+}
+.uploadButton{
+  margin-bottom:100rpx;
+  width:500rpx;
+}
+.iconfont{
+  margin-left:8rpx;
+}

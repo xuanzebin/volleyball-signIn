@@ -1,0 +1,24 @@
+<view class="container">
+  <form  bindsubmit="signformSubmit">
+    <view class="section">
+      <text>标题:</text>
+      <input name="name" value="今天打球吗？"></input>
+    </view>
+    <view class="section">
+      <text>约球时间:</text>
+      <input name="time" value="今天下午"></input>
+    </view>
+    <view class="section">
+      <text>创建人:</text>
+      <input name="creater" value="{{creater}}"></input>
+    </view>
+    <view class="section">
+      <text>备注:</text>
+      <textarea name="remarks" value="无"></textarea>
+    </view>
+    <view class="section">
+      <button form-type="reset" class="resetButton">清空</button>
+      <button form-type="submit" class="submitButton">约球</button>
+    </view>
+  </form>
+</view>

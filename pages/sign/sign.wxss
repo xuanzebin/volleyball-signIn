@@ -1,0 +1,58 @@
+.signButton{
+  margin-bottom:100rpx;
+  width:70%;
+}
+.signform{
+  margin-bottom:40rpx;
+  width:564rpx;
+  border:3px solid black;
+  border-right-color: transparent;
+  padding:40rpx;
+  padding-right:0;
+}
+.signform .formMessage{
+  display:flex;
+  flex-direction: column;
+}
+.signform .formMessage text{
+  margin:10rpx 0;
+}
+.signform .formButton{
+  display:flex;
+}
+.signform button{
+  width:250rpx;
+  margin-right:5rpx;
+  margin-left:28rpx;
+}
+.signform .signIn{
+  background:rgb(0, 153, 255);
+  box-shadow: 0 0 3px rgba(0,0,0,0.5);
+  color:white;
+}
+.signform .signIn.invite{
+  background-color: #33D1A1;
+}
+.signform .leave{
+  background:red;
+  box-shadow: 0 0 3px rgba(0,0,0,0.5);
+  color:white;
+}
+.row{
+  margin-bottom:20rpx;
+}
+.title{
+  font-weight: bold;
+}
+.formList{
+  display: flex;
+  justify-content: center;
+
+}
+.iconWrapper{
+  width: 60rpx;
+  border:3px solid black;
+  border-left-color: transparent;
+  margin-bottom:40rpx;
+  margin-left:-12rpx; 
+}
