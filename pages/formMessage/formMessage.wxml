@@ -16,7 +16,7 @@
     <view class="leaveList">
       <view wx:for="{{leaveList}}" wx:key="{{index}}" class="messageWrapper">
           <image src="{{item.avatarUrl}}" class="userPic" mode="aspectFit"></image>
-          <text>{{item.nickName}}</text>
+          <text class="nickName">{{item.nickName}}</text>
       </view>
     </view>
     <text class="result">咕咕咕人数：{{leaveSum}}人</text>

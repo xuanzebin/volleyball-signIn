@@ -1,14 +1,28 @@
 <view class="container">
   <button bindtap="upload" class="uploadButton">上传图片</button>
   <view class="imageWrapper">
-    <view wx:for="{{fileUrl}}" wx:key="{{index}}" class="picWrapper" wx:if="{{fileUrl[0].time}}">
-      <view class="picMessage" bindtap="foldPic" data-index="{{index}}">
+    <view wx:for="{{fileUrl}}" wx:key="{{index}}" wx:for-index="bindex" class="picWrapper" wx:if="{{fileUrl[0].time}}">
+      <view class="picMessage" bindtap="foldPic" data-index="{{bindex}}">
         <text>上传时间: {{item.time}}</text>
-        <text class="iconfont {{!foldCheck[index]?'icon-down':'icon-up'}}"></text>
+        <text class="iconfont {{!foldCheck[bindex]?'icon-down':'icon-up'}}"></text>
       </view>
-      <view class="itemWrapper" hidden="{{foldCheck[index]}}">
-        <view wx:for="{{item.url}}" wx:key="{{index}}">
-          <image src="{{item}}" class="uploadImage" mode="aspectFit"  bindtap='previewMoreImage' data-src="{{item}}"></image>
+      <view class="itemWrapper" hidden="{{foldCheck[bindex]}}">
+        <view class="singelPic" wx:for="{{item.picMessage}}" wx:key="{{index}}">
+          <view class="commentWrapper">
+              <view>
+                <text class="iconfont icon-smile {{fileUrl[bindex].picMessage[index].smile[userName]?'active':''}}" bindtap="smilePic" data-index="{{index}}" data-bindex="{{bindex}}"></text>
+                <text class="number" data-index="{{index}}" data-bindex="{{bindex}}">{{fileUrl[bindex].picMessage[index].smile.length}}</text>
+              </view>
+              <view>
+                <text class="iconfont icon-frown {{fileUrl[bindex].picMessage[index].frown[userName]?'active':''}}" bindtap="frownPic" data-index="{{index}}" data-bindex="{{bindex}}"></text>
+                <text class="number" data-index="{{index}}" data-bindex="{{bindex}}">{{fileUrl[bindex].picMessage[index].frown.length}}</text>
+              </view>
+
+          </view>
+          <image src="{{item.url}}" class="uploadImage" mode="aspectFit"  bindtap='previewMoreImage' data-src="{{item.url}}"></image>
+          <view class="iconWrapper">
+            <text class="iconfont icon-delete" hidden="{{item.owner!==userId}}" bindtap="deletePic" data-index="{{index}}" data-bindex="{{bindex}}"></text>
+          </view>
         </view>
       </view>
     </view>

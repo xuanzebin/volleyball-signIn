@@ -14,7 +14,7 @@
   flex-direction: column;
 }
 .userPic{
-  width:150rpx; height:150rpx;
+  width:145rpx; height:145rpx;
   border-radius: 50%;
   margin:0 32rpx;
 }
@@ -34,5 +34,9 @@ text{
   margin:6rpx 0;
 }
 .messageWrapper text{
-  font-size:30rpx;
+  font-size:24rpx;
+  width:145rpx;
+  height:2.8em;
+  word-break: break-all;
+  overflow: auto;
 }

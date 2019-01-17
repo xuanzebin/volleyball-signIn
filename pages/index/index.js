@@ -18,8 +18,13 @@ Page({
     app.globalData.userInfo=null
   },
   onLoad: function () {
-
     AV.User.loginWithWeapp().then(user => {
+      if (JSON.parse(user._hashedJSON.authData).lc_weapp.unionid){
+        console.log('你关注了公众号')
+      } else {
+        console.log('你还没有关注公众号')
+        console.log(JSON.parse(user._hashedJSON.authData))
+      }
     }).catch(console.error)
     if (app.globalData.userInfo) {
       this.setData({

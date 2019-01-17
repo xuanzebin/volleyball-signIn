@@ -52,6 +52,9 @@ Page({
         for (let key in app.data.formList[this.data.formIndex].leave) {
           userList.forEach((value, index) => {
             if (value.nickName === key) {
+              // if (value.nickName.length>4){
+              //   value.nickName=value.nickName.slice(0,5)+'...'
+              // }
               leaveList.push(value)
             }
           })

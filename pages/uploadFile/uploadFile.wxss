@@ -1,8 +1,9 @@
 .uploadImage{
   border:3px solid black;
   width:500rpx; height: 500rpx;
+  border-right-color:transparent;
+  border-left-color:transparent;
   margin-bottom:20rpx;
-  border-radius: 12rpx;
 }
 .imageWrapper{
   width:700rpx;
@@ -10,6 +11,12 @@
   flex-direction: column;
   align-items:center;
   justify-content: center;
+}
+.picWrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .picMessage{
   text-align: center;
@@ -29,4 +36,35 @@
 }
 .iconfont{
   margin-left:8rpx;
+}
+.iconWrapper{
+  width: 65rpx;
+  border:3px solid black;
+  border-left-color: transparent;
+  margin-bottom:20rpx;
+  margin-left:-12rpx; 
+}
+.commentWrapper{
+  width: 65rpx;
+  border:3px solid black;
+  border-right-color: transparent;
+  margin-bottom:20rpx;
+  margin-right:-12rpx; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.commentWrapper view{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom:20rpx;
+  margin-top:20rpx;
+  margin-right:-6rpx;
+}
+.singelPic{
+  display: flex;
+  justify-content: center;
 }
