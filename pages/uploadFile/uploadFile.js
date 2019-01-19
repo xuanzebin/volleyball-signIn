@@ -98,6 +98,8 @@ Page({
         }).catch(console.error);
       }
     });
+    // setTimeout(()=>{
+      
     new AV.Query('_File')
       .ascending('createdAt')
       .find()
@@ -125,10 +127,10 @@ Page({
             let { url } = value.attributes
             let smile
             let frown
-
-
-            smile =JSON.parse(res[index][0].attributes.smile) 
-            frown =JSON.parse(res[index][0].attributes.frown) 
+            console.log(res)
+            let secure = { "length": 0 }
+            smile =JSON.parse(res[index][0].attributes.smile) || secure
+            frown =JSON.parse(res[index][0].attributes.frown) || secure
             let picMessage = { url, owner, id, smile, frown }
             if (time === this.data.fileUrl[0].time) {
               fileUrl[0].picMessage.unshift(picMessage)
@@ -149,6 +151,8 @@ Page({
         })
       })
       .catch(console.error);
+
+    // },250)
   },
   upload:function(e){
     wx.chooseImage({
